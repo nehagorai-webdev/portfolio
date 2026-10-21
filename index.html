@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neha Gorai — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor"        id="cursor"></div>
+  <div class="cursor-ring"   id="cursor-ring"></div>
+
+  <!-- ════════════ CONTACT MODAL ════════════ -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-label="Contact Neha">
+    <div class="modal-card" id="modal-card">
+
+      <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+
+      <div class="modal-header">
+        <p class="modal-eyebrow">Say hello</p>
+        <h3 class="modal-title">Let's connect</h3>
+        <p class="modal-sub">I'm open to opportunities, collabs, and interesting conversations.</p>
+      </div>
+
+      <div class="modal-links">
+        <a href="https://linkedin.com/in/neha-gorai" target="_blank" rel="noopener" class="mlink linkedin">
+          <span class="mlink-icon">in</span>
+          <span class="mlink-body">
+            <strong>LinkedIn</strong>
+            <small>linkedin.com/in/neha-gorai</small>
+          </span>
+          <span class="mlink-arrow">→</span>
+        </a>
+        <a href="mailto:nehagorai@email.com" class="mlink email">
+          <span class="mlink-icon">✉</span>
+          <span class="mlink-body">
+            <strong>Email me</strong>
+            <small>nehagorai@email.com</small>
+          </span>
+          <span class="mlink-arrow">→</span>
+        </a>
+      </div>
+
+      <div class="modal-divider"><span>or drop a quick message</span></div>
+
+      <form class="modal-form" id="modal-form" novalidate>
+        <div class="mfield">
+          <label for="m-name">Your name</label>
+          <input type="text" id="m-name" placeholder="Jane Smith" required />
+        </div>
+        <div class="mfield">
+          <label for="m-email">Your email</label>
+          <input type="email" id="m-email" placeholder="jane@example.com" required />
+        </div>
+        <div class="mfield">
+          <label for="m-msg">Message</label>
+          <textarea id="m-msg" rows="4" placeholder="Hi Neha, I'd love to chat about…" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary btn-full" id="modal-submit">Send message</button>
+        <p class="mok" id="mok">✓ Sent! I'll reply soon.</p>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- ════════════ NAV ════════════ -->
+  <header id="nav">
+    <div class="nav-inner">
+      <a href="#home" class="logo">NG<em>.</em></a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#home"     class="nav-a active">Home</a>
+        <a href="#about"    class="nav-a">About</a>
+        <a href="#projects" class="nav-a">Projects</a>
+        <a href="#goals"    class="nav-a">Goals</a>
+        <button class="nav-contact open-modal">Contact</button>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- mobile drawer -->
+  <div class="drawer" id="drawer">
+    <a href="#home"     class="drawer-a">Home</a>
+    <a href="#about"    class="drawer-a">About</a>
+    <a href="#projects" class="drawer-a">Projects</a>
+    <a href="#goals"    class="drawer-a">Goals</a>
+    <button class="drawer-contact open-modal">Contact</button>
+  </div>
+
+  <!-- ════════════ LANDING / HOME ════════════ -->
+  <section id="home">
+    <div class="dot-grid"></div>
+    <!-- stars injected by JS -->
+
+    <div class="hero-wrap">
+
+      <!-- LEFT: text -->
+      <div class="hero-text">
+
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          Open for opportunities
+        </div>
+
+        <h1 class="hero-name">
+          <span class="hn-hi">Hi, I'm</span>
+          <span class="hn-first">Neha</span>
+          <span class="hn-last">Gorai<em>.</em></span>
+        </h1>
+
+        <p class="hero-role">
+          <span id="typed-text"></span><span class="typed-caret">|</span>
+        </p>
+
+        <p class="hero-sub">
+          A CSE undergrad from Jamshedpur who loves turning ideas into
+          real, working things on the web — with care for design and
+          obsession for clean code.
+        </p>
+
+        <div class="hero-btns">
+          <a href="#projects" class="btn-primary">See my work</a>
+          <button class="btn-ghost open-modal">Let's connect →</button>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: visual -->
+      <div class="hero-visual" id="hero-visual">
+        <div class="blob b1"></div>
+        <div class="blob b2"></div>
+        <div class="blob b3"></div>
+
+        <div class="orb-wrap">
+          <div class="orb-ring r1"></div>
+          <div class="orb-ring r2"></div>
+          <div class="orb-ring r3"></div>
+          <div class="orb-center">NG</div>
+        </div>
+
+        <div class="chip chip-a">⚡ Fast builds</div>
+        <div class="chip chip-b">🎨 Clean UI</div>
+        <div class="chip chip-c">📱 Responsive</div>
+        <div class="chip chip-d">🎓 B.Tech CSE</div>
+      </div>
+
+    </div><!-- /hero-wrap -->
+
+    <div class="scroll-nudge">
+      <span>scroll</span>
+      <div class="scroll-bar"></div>
+    </div>
+  </section>
+
+  <!-- ════════════ ABOUT ════════════ -->
+  <section id="about">
+    <div class="section-wrap about-wrap">
+
+      <div class="about-left reveal">
+        <div class="avatar-frame">
+          <div class="avatar-initials">NG</div>
+        </div>
+        <div class="avatar-shadow"></div>
+      </div>
+
+      <div class="about-right reveal">
+        <p class="section-label">Who I am</p>
+        <h2 class="section-heading">I turn problems<br>into web solutions.</h2>
+
+        <p class="about-p">
+          Hey! I'm Neha Gorai — a Computer Science &amp; Engineering student
+          from Jamshedpur who got into programming and never really looked back.
+          I love both sides of the craft: making things look right <em>and</em>
+          making them actually work.
+        </p>
+        <p class="about-p">
+          When I'm not writing code I'm sketching UI ideas, reading about
+          design systems, or convincing myself that one more cup of chai
+          will finally fix the bug. (It never does.)
+        </p>
+
+        <!-- Education card -->
+        <div class="edu-card">
+          <span class="edu-icon">🎓</span>
+          <div class="edu-body">
+            <strong>B.Tech — Computer Science &amp; Engineering</strong>
+            <p>RVSCET, Jamshedpur · Jharkhand</p>
+            <div class="edu-foot">
+              <span class="edu-year">2025 – 2029</span>
+              <span class="edu-badge">Currently Pursuing</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills">
+          <span class="skill">HTML &amp; CSS</span>
+          <span class="skill">JavaScript</span>
+          <span class="skill">React</span>
+          <span class="skill">Node.js</span>
+          <span class="skill">Python</span>
+          <span class="skill">C / C++</span>
+          <span class="skill">Git &amp; GitHub</span>
+          <span class="skill">Figma</span>
+          <span class="skill">UI / UX</span>
+          <span class="skill">REST APIs</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════ PROJECTS ════════════ -->
+  <section id="projects">
+    <div class="section-wrap">
+
+      <div class="section-top reveal">
+        <p class="section-label">Things I've built</p>
+        <h2 class="section-heading">Projects</h2>
+        <p class="section-sub">Four real projects, each one a learning milestone.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- 01 Landing Page -->
+        <article class="card reveal">
+          <div class="card-num">01</div>
+          <div class="card-body">
+            <h3>Landing Page</h3>
+            <p>A conversion-focused landing page with smooth scroll animations,
+              a clear visual hierarchy, and a layout that looks great on every screen.</p>
+            <div class="tech-stack">
+              <span class="tech" data-lang="html">HTML5</span>
+              <span class="tech" data-lang="css">CSS3</span>
+              <span class="tech" data-lang="js">JavaScript</span>
+            </div>
+            <ul class="card-details">
+              <li>CSS Grid &amp; Flexbox layout system</li>
+              <li>Custom keyframe scroll animations</li>
+              <li>Mobile-first responsive breakpoints</li>
+              <li>Semantic HTML for SEO &amp; accessibility</li>
+            </ul>
+          </div>
+          <div class="card-foot">
+            <a href="#" class="card-live">Live preview →</a>
+            <a href="#" class="card-gh">GitHub</a>
+          </div>
+          <div class="card-glow"></div>
+        </article>
+
+        <!-- 02 Calculator -->
+        <article class="card reveal">
+          <div class="card-num">02</div>
+          <div class="card-body">
+            <h3>Calculator Web</h3>
+            <p>A sleek, keyboard-accessible calculator built completely from scratch —
+              no libraries, just clean logic and a glassmorphism UI that actually feels good to use.</p>
+            <div class="tech-stack">
+              <span class="tech" data-lang="html">HTML5</span>
+              <span class="tech" data-lang="css">CSS3</span>
+              <span class="tech" data-lang="js">Vanilla JS</span>
+            </div>
+            <ul class="card-details">
+              <li>DOM manipulation &amp; event listeners</li>
+              <li>Full keyboard input &amp; shortcut support</li>
+              <li>Calculation history &amp; display state logic</li>
+              <li>Glassmorphism design with CSS backdrop-filter</li>
+            </ul>
+          </div>
+          <div class="card-foot">
+            <a href="#" class="card-live">Live preview →</a>
+            <a href="#" class="card-gh">GitHub</a>
+          </div>
+          <div class="card-glow"></div>
+        </article>
+
+        <!-- 03 Portfolio Web -->
+        <article class="card reveal">
+          <div class="card-num">03</div>
+          <div class="card-body">
+            <h3>Portfolio Web</h3>
+            <p>This very portfolio — designed to feel human and crafted, not AI-generated.
+              Every animation was a deliberate decision, not a template default.</p>
+            <div class="tech-stack">
+              <span class="tech" data-lang="html">HTML5</span>
+              <span class="tech" data-lang="css">CSS3</span>
+              <span class="tech" data-lang="js">JavaScript</span>
+            </div>
+            <ul class="card-details">
+              <li>Custom cursor with pointer tracking</li>
+              <li>Intersection Observer for scroll reveals</li>
+              <li>CSS 3D tilt effect on project cards</li>
+              <li>Contact modal — hidden until triggered</li>
+            </ul>
+          </div>
+          <div class="card-foot">
+            <a href="#" class="card-live">Live preview →</a>
+            <a href="#" class="card-gh">GitHub</a>
+          </div>
+          <div class="card-glow"></div>
+        </article>
+
+        <!-- 04 MorphShield — Featured -->
+        <article class="card card-featured reveal">
+          <div class="featured-badge">⭐ Featured</div>
+          <div class="card-num">04</div>
+          <div class="featured-inner">
+            <div class="card-body">
+              <h3>MorphShield</h3>
+              <p>A security-focused web application with an adaptive UI that
+                morphs dynamically based on real-time threat levels. Built to protect
+                users without sacrificing a smooth, intuitive experience.</p>
+              <div class="tech-stack">
+                <span class="tech" data-lang="react">React.js</span>
+                <span class="tech" data-lang="node">Node.js</span>
+                <span class="tech" data-lang="css">CSS3</span>
+                <span class="tech" data-lang="security">Security</span>
+              </div>
+              <ul class="card-details">
+                <li>React component architecture &amp; state management</li>
+                <li>Node.js + Express REST API backend</li>
+                <li>Real-time threat detection &amp; adaptive UI themes</li>
+                <li>Dynamic theme switching by threat level (safe / warning / critical)</li>
+              </ul>
+            </div>
+            <div class="card-foot">
+              <a href="#" class="card-live">Live preview →</a>
+              <a href="#" class="card-gh">GitHub</a>
+            </div>
+          </div>
+          <div class="card-glow"></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ FUTURE GOALS ════════════ -->
+  <section id="goals">
+    <div class="section-wrap">
+
+      <div class="section-top reveal">
+        <p class="section-label">Where I'm headed</p>
+        <h2 class="section-heading">Future Goals</h2>
+        <p class="section-sub">What I'm working toward — one project and one lesson at a time.</p>
+      </div>
+
+      <div class="goals-grid">
+
+        <div class="goal-card reveal">
+          <div class="goal-icon">🚀</div>
+          <h4>Full-Stack Developer</h4>
+          <p>Master the complete MERN stack and build end-to-end applications
+            that are robust, scalable, and a pleasure to use.</p>
+        </div>
+
+        <div class="goal-card reveal">
+          <div class="goal-icon">🤖</div>
+          <h4>AI / ML Integration</h4>
+          <p>Learn to weave machine learning into real products — making web
+            apps smarter and more useful for the people who rely on them.</p>
+        </div>
+
+        <div class="goal-card reveal">
+          <div class="goal-icon">🌍</div>
+          <h4>Product-Based Company</h4>
+          <p>Join a product company where I can build tools that genuinely
+            reach and help millions of people across the world.</p>
+        </div>
+
+        <div class="goal-card reveal">
+          <div class="goal-icon">📖</div>
+          <h4>Open Source Contributor</h4>
+          <p>Give back to the community that's been teaching me — by
+            contributing meaningfully to projects that developers depend on.</p>
+        </div>
+
+        <div class="goal-card reveal">
+          <div class="goal-icon">💡</div>
+          <h4>Launch My Own Product</h4>
+          <p>One day build something from the ground up — a product
+            with a clear problem, a strong vision, and real impact.</p>
+        </div>
+
+        <div class="goal-card reveal">
+          <div class="goal-icon">🏅</div>
+          <h4>Never Stop Learning</h4>
+          <p>Stay genuinely curious. Whether it's a new framework, a design
+            principle, or a CS concept — keep growing, always.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ FOOTER ════════════ -->
+  <footer>
+    <div class="footer-inner">
+      <span class="logo">NG<em>.</em></span>
+      <span class="footer-copy">Built with care by Neha Gorai © 2026</span>
+      <button class="footer-cta open-modal">Say hello →</button>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
